@@ -1,5 +1,5 @@
 variable "base_bucket_name" {
-    default = "datalak-igti-tf"
+    default = "datalake-igti-tf"
 
 }
 
