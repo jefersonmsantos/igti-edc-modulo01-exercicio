@@ -1,4 +1,4 @@
-variable "base_bubket_name" {
+variable "base_bucket_name" {
     default = "datalak-igti-tf"
 
 }
@@ -12,3 +12,8 @@ variable "numero_conta" {
     default = "289405200928"
 
 }
+
+variable "aws_region" {
+    default = "sa-east-1"
+}
+
