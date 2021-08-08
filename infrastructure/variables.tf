@@ -1,4 +1,4 @@
-variable "base_bubket_name" {
+variable "base_bucket_name" {
     default = "datalak-igti-tf"
 
 }
