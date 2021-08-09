@@ -52,7 +52,7 @@ def handler(event, context):
                     "Configurations": [{
                         "Classification": "export",
                         "Properties": {
-                            "PYSPARK_PYTHON": "/user/bin/python3",
+                            "PYSPARK_PYTHON": "/usr/bin/python3",
                             "PYSPARK_DRIVER_PYTHON": "/usr/bin/python3"
                         }
                     }]
@@ -90,7 +90,7 @@ def handler(event, context):
                         'Args': ['spark-submit',
                                  '--packages', 'io.delta:delta-core_2.12:1.0.0',
                                  '--conf', 'spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension',
-                                 '--conf', 'spark.sql.catalog.spark_catalog=org.apache.spark.sql.DeltaCatalog',
+                                 '--conf', 'spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog',
                                  '--master', 'yarn',
                                  '--deploy-mode', 'cluster',
                                  's3://datalake-igti-tf-producao-289405200928/emr-code/pyspark/01_delta_spark_insert.py'
@@ -105,7 +105,7 @@ def handler(event, context):
                         'Args': ['spark-submit',
                                  '--packages', 'io.delta:delta-core_2.12:1.0.0',
                                  '--conf', 'spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension',
-                                 '--conf', 'spark.sql.catalog.spark_catalog=org.apache.spark.sql.DeltaCatalog',
+                                 '--conf', 'spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog',
                                  '--master', 'yarn',
                                  '--deploy-mode', 'cluster',
                                  's3://datalake-igti-tf-producao-289405200928/emr-code/pyspark/01_delta_spark_upsert.py'
