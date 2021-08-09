@@ -1,9 +1,9 @@
-#!/usr/bin;env bash
+#!/usr/bin/env bash
 
 cd infrastracture
 
 #Declara variável para reutilização nas validações do diretório
-PACKAGE = "package"
+PACKAGE="package"
 
 #Cria o diretório e instala as dependências da função lambda
 if [ -d $PACKAGE]
@@ -18,7 +18,7 @@ else
 fi 
 
 #Declara variável que localiza o requirementes com as dependências do projeto
-FILE_REQUIREMENTS = ../etl/lambda_requirements.txt
+FILE_REQUIREMENTS=../etl/lambda_requirements.txt
 
 #Verifica se o arquivo lambda_requirements existe
 if [ -f $FILE_REQUIREMENTS ]
