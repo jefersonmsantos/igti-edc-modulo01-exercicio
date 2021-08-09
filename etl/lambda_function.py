@@ -65,7 +65,7 @@ def handler(event, context):
                     },
                     {
                         "Classification": "spark-defaults",
-                        "Propoerties": {
+                        "Properties": {
                             "spark.submit.deployMode": "cluster",
                             "spark.speculation": "false",
                             "spark.sql.adaptive.enabled": "true",
