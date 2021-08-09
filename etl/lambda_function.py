@@ -4,7 +4,7 @@ def handler(event, context):
     """
     Lambda function that starts a job flow in EMR.
     """
-    cliente = boto3.client('emr', region_name='sa-south-1')
+    client = boto3.client('emr', region_name='sa-south-1')
 
     cluster_id = client.run_job_flow(
                 Name='EMR-Jeferson_IGTI-delta',
