@@ -8,7 +8,7 @@ PACKAGE = "package"
 #Cria o diretório e instala as dependências da função lambda
 if [ -d $PACKAGE]
 then
-    echo "O Diretório "$PACKAGE" j´´a existe."
+    echo "O Diretório "$PACKAGE" ja existe."
 else
     echo "=============================================="
     echo "Criando o diretório "$PACKAGE"..."
