@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd infrastracture
+cd infrastructure
 
 #Declara variável para reutilização nas validações do diretório
 PACKAGE="package"
@@ -33,10 +33,10 @@ fi
 cd $PACKAGE
 
 #Declara variável que localiza a função lambda para reutilização no código
-LAMBDA_FUNTION=../../etl/lambda_function.py
+LAMBDA_FUNCTION=../../etl/lambda_function.py
 
 #Verifica se o arquivo lambda_function.py existe
-if [-f $LAMBDA_FUNCTION ]
+if [ -f $LAMBDA_FUNCTION ]
 then
     echo "==============================================="
     echo "Copiando função Handler..."
