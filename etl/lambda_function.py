@@ -11,7 +11,7 @@ def handler(event, context):
                 ServiceRole='EMR_DefaultRole',
                 JobFlowRole='EMR_EC2_DefaultRole',
                 VisibleToAllUsers=True,
-                LogUri='datalake-igti-tf-producao-289405200928/emr-logs',
+                LogUri='s3://datalake-igti-tf-producao-289405200928/emr-logs',
                 ReleaseLabel='emr-6.3.0',
                 Instances={
                     'InstanceGroups': [
