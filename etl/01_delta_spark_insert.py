@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession 
-from pyspark.sql import col, min, max 
+from pyspark.sql.functions import col, min, max 
 
 #Cria objeto da Spark Session
 spark = (SparkSession.builder.appName("DeltaExercise")
