@@ -108,7 +108,7 @@ def handler(event, context):
                                  '--conf', 'spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog',
                                  '--master', 'yarn',
                                  '--deploy-mode', 'cluster',
-                                 's3://datalake-igti-tf-producao-289405200928/emr-code/pyspark/01_delta_spark_upsert.py'
+                                 's3://datalake-igti-tf-producao-289405200928/emr-code/pyspark/02_delta_spark_upsert.py'
                                  ]
                     }
                 }],
