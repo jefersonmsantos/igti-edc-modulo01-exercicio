@@ -76,6 +76,25 @@ resource "aws_iam_role_policy_attachment" "lambda_attach" {
 ## KINESIS ##
 #############
 
+resource "aws_iam_role" "firehose_role" {
+   name = "IGTI_firehose_role"
+
+   assume_role_policy = <<EOF
+ {
+   "Version": "2012-10-17",
+   "Statement": [
+     {
+       "Action": "sts:AssumeRole",
+       "Principal": {
+         "Service": "firehose.amazonaws.com"
+       },
+       "Effect": "Allow",
+       "Sid": ""
+     }
+   ]
+ }
+ EOF
+ }
  resource "aws_iam_policy" "firehose" {
    name        = "IGTIFirehosePolicy"
    path        = "/"
