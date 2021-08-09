@@ -36,7 +36,7 @@ jobs:
         COMMAND_IAC: terraform
       run: |
         cd infrastructure
-        zip -r lambda_function_payload.zip lambda/*
+        zip -r lambda_function_payload.zip . -i lambda/*
         $COMMAND_IAC init
         $COMMAND_IAC validate
         $COMMAND_IAC plan
